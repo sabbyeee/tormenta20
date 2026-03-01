@@ -1,10 +1,10 @@
     /* aqui estou criando variaveis de cor para usar depois */
      :root {
-        --color-red: #9c1b1f;
-        --color-red2: #a33139;
-        --color-red3: #5d0f14; /*green */
+        --color-main: #9c1b1f;
+        --color-submain: #a33139;
+        --color-darkmain: #5d0f14; /*green */
         --color-totalwhite: #ffffff; /* green 2*/
-        --color-red4: #34090c; /*green3*/
+        --color-darkestmain: #34090c; /*green3*/
         --color-white: #e5f2ee;  
     }
 
@@ -38,8 +38,15 @@
         src: url('Inter-VariableFont_opsz\,wght.ttf') format(truetype);
         font-weight: normal;
         font-style: normal;
-    }
     
+    }
+     body {
+       
+        font-family: 'readex pro';
+        background-color: var(--color-totalwhite);
+
+    }
+
     /* aqui eu mexo na imagem da logo e deixo ela menor */
     .img_logo_header{
         width: 45.5px;
@@ -55,8 +62,8 @@
 
     /* aqui eu altero o fundo da header */
     .header{
-        background-color: var(--color-red3);
-        box-shadow: 1px 1px 4px var(--color-red4);
+        background-color: var(--color-darkmain);
+        box-shadow: 1px 1px 4px var(--color-darkestmain);
         height: 60px;
         justify-content: space-between;
         padding: 0 5%;
@@ -81,48 +88,32 @@
     
     /* isso tudo aqui eh pra fazer as faixas vermelhas desgracadas*/
     .layout {
-        display: flex;
-        flex-direction: row;
-        height: 100vh;  
-        position: relative;  /* isso aqui faz a imagem do cavaleiro funfar*/
+        display: grid;
+        grid-template-columns: 0.3fr 1.5fr 3fr 1fr 0.3fr;
+        grid-template-rows: 100vh;
+        height: 100vh;
         min-height: 100vh;
     }
-    .branco{
-        
-        background-color: var(--color-totalwhite);
-        flex: 2.5;
-    }
-    .branco2{
-        flex: 1;
-    }
-    .colorido{
-       background-color: var(--color-red);
-       flex: 3;
-       align-items: center;
-       justify-content: center;
-       margin: 0;
-       position: relative; /*isso eh pra arrumar a posicao dos textos*/
-       
-        
-    }
-    .colorido2{
-        background-color: var(--color-red);
-        flex: 0.3;
-        
-    }
-    .colorido0 {
-        flex: 0.3;
-        background-color: var(--color-red);
-    }
+
+
+    .colorido0 {grid-column: 1; background-color: var(--color-main);}
+    .branco{grid-column: 2; background-color: var(--color-totalwhite);}
+    .colorido{ grid-column: 3; background-color: var(--color-main); grid-row: 1;}
+    .branco2{grid-column: 4; background-color: var(--color-totalwhite);}
+    .colorido2{grid-column: 5; background-color: var(--color-main); grid-row: 1;}
+    
 
     /*isso aqui eh a imagem do cavaleiro*/
      .imagem_overlay{
-        position: absolute;
-        top: 47%;
-        left: 25.5%;
-        transform: translate(-40%, -50%);
+        grid-column: 2 / 4;
+        grid-row: 1;
         z-index: 10;
-        width: 860px;
+        width: 55%;
+        pointer-events: none;
+        margin-left: 0;
+        margin-top: 15px;
+        align-self: left ;
+        justify-self: left;
      }
 
      /*AQUI eh pros textos dentro da faixa vermelha*/
@@ -131,52 +122,66 @@
         font-family: 'lovelo';
         font-weight: normal;
         color: var(--color-white);
-        font-size: 130px;
-        transform: translate(-100px, 180px);
-
+        font-size: clamp(40px, 8vw, 130px);
+        margin-top: 13%;
+        margin-right: 20%;
+        margin-bottom: 0;
+       
     
      }
      .titulo2 {
         font-family: 'ahsing';
         font-weight: normal;
         color: var(--color-white);
-        font-size: 100px;
-        transform: translate(80px, 115px);
+        font-size: clamp(25px, 5vw, 100px);
+        margin-top: -5vh;
+        margin-left: 15vh;
+    
+        
      }
      .main_text{
         font-family: 'inter';
         font-weight: normal;
         color: var(--color-white);
-        margin: 150px;
-        padding: 0;
-        transform: translateY(30px)
+        margin: clamp(50px, 9vw, 150px);
+        margin-top: 5%;
+        margin-right: 15%;
+    
+       
      }
 
      .main_button{
         background-color: var(--color-white);
-        color: var(--color-red);
+        color: var(--color-main);
         font-family: 'readex pro';
         padding: 18px 70px;
         border: none;
         border-radius: 50px;
-        font-size: 18px;
+        font-size: clamp(10px, 1vw, 18px);
         text-align: center;
-        transform: translateY(-30px);
         cursor: pointer;
         transition: 1s;
+        margin-top: -10%;
+      
+        
      }
+
      .main_button:hover{
         box-shadow: 0 0 50px var(--color-white);
      }
      .main_content{
+       grid-column: 3;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       justify-content: center;
+        gap: 20px;
+
+     }
+     .main_titles{
         display: flex;
         flex-direction: column;
         align-items: center;
      }
-   
-    body {
-        margin: 0;
-        font-family: 'readex pro';
-        background-color: var(--color-totalwhite);
 
-    }
+   
