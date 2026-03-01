@@ -110,15 +110,19 @@
         flex: 0.3;
         
     }
+    .colorido0 {
+        flex: 0.3;
+        background-color: var(--color-red);
+    }
 
     /*isso aqui eh a imagem do cavaleiro*/
      .imagem_overlay{
         position: absolute;
         top: 47%;
         left: 25.5%;
-        transform: translate(-50%, -50%);
+        transform: translate(-40%, -50%);
         z-index: 10;
-        width: 900px;
+        width: 860px;
      }
 
      /*AQUI eh pros textos dentro da faixa vermelha*/
@@ -158,8 +162,12 @@
         font-size: 18px;
         text-align: center;
         transform: translateY(-30px);
+        cursor: pointer;
+        transition: 1s;
      }
-
+     .main_button:hover{
+        box-shadow: 0 0 50px var(--color-white);
+     }
      .main_content{
         display: flex;
         flex-direction: column;
