@@ -1,0 +1,1 @@
+sla eu tinha feito um design no canva ai eu quis tentar criar ele em codigo ficou assim vou add mais coisa dps

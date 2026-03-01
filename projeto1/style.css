@@ -1,0 +1,174 @@
+    /* aqui estou criando variaveis de cor para usar depois */
+     :root {
+        --color-red: #9c1b1f;
+        --color-red2: #a33139;
+        --color-red3: #5d0f14; /*green */
+        --color-totalwhite: #ffffff; /* green 2*/
+        --color-red4: #34090c; /*green3*/
+        --color-white: #e5f2ee;  
+    }
+
+    /* qnd vc usa o asterisco ele aplica pra todos os elementos da pagina */
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    /* aqui eu crio a fonte personalizada q eu quero usar, uso format truetype pq eh fonte .ttf e opentype pra .otf */
+    @font-face {
+        font-family: readex pro;
+        src: url('ReadexPro-Regular.ttf') format(truetype);
+        font-weight: normal;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: lovelo;
+        src: url('Lovelo Black.otf') format(opentype);
+        font-weight: normal;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: ahsing;
+        src: url('ahsing-regular.otf') format(opentype);
+        font-weight: normal;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: inter;
+        src: url('Inter-VariableFont_opsz\,wght.ttf') format(truetype);
+        font-weight: normal;
+        font-style: normal;
+    }
+    
+    /* aqui eu mexo na imagem da logo e deixo ela menor */
+    .img_logo_header{
+        width: 45.5px;
+       
+    }
+
+    /* aqui eu alinho os elementos */
+    .header, .navigation_header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    /* aqui eu altero o fundo da header */
+    .header{
+        background-color: var(--color-red3);
+        box-shadow: 1px 1px 4px var(--color-red4);
+        height: 60px;
+        justify-content: space-between;
+        padding: 0 5%;
+    }
+
+    /* coloca o espaco entre os elemtnos na header */
+    .navigation_header{
+    gap: 60px;
+    }
+
+    /* altera as cores e animacoes dos links*/
+    .navigation_header a{
+        text-decoration: none;
+        color: var(--color-white);
+        transition: 1s;
+    }
+    
+    /*ainda alterando as animacoes, aqui eh o brilho qnd passa o mouse*/
+    .spark:hover{
+     text-shadow: 0 0 8px var(--color-totalwhite);
+    }
+    
+    /* isso tudo aqui eh pra fazer as faixas vermelhas desgracadas*/
+    .layout {
+        display: flex;
+        flex-direction: row;
+        height: 100vh;  
+        position: relative;  /* isso aqui faz a imagem do cavaleiro funfar*/
+        min-height: 100vh;
+    }
+    .branco{
+        
+        background-color: var(--color-totalwhite);
+        flex: 2.5;
+    }
+    .branco2{
+        flex: 1;
+    }
+    .colorido{
+       background-color: var(--color-red);
+       flex: 3;
+       align-items: center;
+       justify-content: center;
+       margin: 0;
+       position: relative; /*isso eh pra arrumar a posicao dos textos*/
+       
+        
+    }
+    .colorido2{
+        background-color: var(--color-red);
+        flex: 0.3;
+        
+    }
+
+    /*isso aqui eh a imagem do cavaleiro*/
+     .imagem_overlay{
+        position: absolute;
+        top: 47%;
+        left: 25.5%;
+        transform: translate(-50%, -50%);
+        z-index: 10;
+        width: 900px;
+     }
+
+     /*AQUI eh pros textos dentro da faixa vermelha*/
+
+     .titulo1 {
+        font-family: 'lovelo';
+        font-weight: normal;
+        color: var(--color-white);
+        font-size: 130px;
+        transform: translate(-100px, 180px);
+
+    
+     }
+     .titulo2 {
+        font-family: 'ahsing';
+        font-weight: normal;
+        color: var(--color-white);
+        font-size: 100px;
+        transform: translate(80px, 115px);
+     }
+     .main_text{
+        font-family: 'inter';
+        font-weight: normal;
+        color: var(--color-white);
+        margin: 150px;
+        padding: 0;
+        transform: translateY(30px)
+     }
+
+     .main_button{
+        background-color: var(--color-white);
+        color: var(--color-red);
+        font-family: 'readex pro';
+        padding: 18px 70px;
+        border: none;
+        border-radius: 50px;
+        font-size: 18px;
+        text-align: center;
+        transform: translateY(-30px);
+     }
+
+     .main_content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+     }
+   
+    body {
+        margin: 0;
+        font-family: 'readex pro';
+        background-color: var(--color-totalwhite);
+
+    }
