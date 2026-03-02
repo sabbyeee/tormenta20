@@ -1,1 +1,2 @@
-sla eu tinha feito um design no canva ai eu quis tentar criar ele em codigo ficou assim vou add mais coisa dps
+sla eu tinha feito um design no canva ai eu quis tentar criar ele em codigo ficou assim vou add mais coisa dps;
+eu n sei nadaaa de javascript ent eu coloquei varias notas explicando oq cada linha e palavra faz pra eu fixar;
