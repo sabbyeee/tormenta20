@@ -155,7 +155,7 @@
         align-self: left ;
         justify-self: left;
         transition: 1s;
-        filter: drop-shadow(0 0 50px var(--color-main));
+        filter: drop-shadow(0 0 53px var(--color-main));
      }
 
      /*AQUI eh pros textos dentro da faixa vermelha*/
